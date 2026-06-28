@@ -1,20 +1,18 @@
-# tavelahub
-TavelaHub primary documentation
+# Tavelahub
 
+TavelaHub primary documentation
 
 # HRIS - Human Resource Information System
 
-![HRIS Banner](./assets/banner.png)
+![Tavelahub Banner](./assets/banner.png)
 
 ## Overview
 
-HRIS (Human Resource Information System) is a web-based application designed to simplify and automate human resource management processes within an organization.
+Tavelahub (Human Resource Information System) is a web-based application designed to simplify and automate human resource management processes within an organization.
 
 The system provides centralized management for employee information, attendance, leave requests, payroll, documents, and HR-related workflows.
 
 This project is developed as a portfolio project using modern web technologies with a focus on scalability, maintainability, and real-world software development practices.
-
----
 
 # Project Goals
 
@@ -27,13 +25,12 @@ The main objectives of this project are:
 - Implement role-based access control
 - Provide comprehensive project documentation
 
----
-
 # Project Scope
 
 ## Included Features
 
 ### Authentication & Authorization
+
 - User login
 - Logout
 - JWT authentication
@@ -41,6 +38,7 @@ The main objectives of this project are:
 - Permission management
 
 ### Employee Management
+
 - Employee profiles
 - Personal information
 - Employment information
@@ -48,39 +46,42 @@ The main objectives of this project are:
 - Position management
 
 ### Attendance Management
+
 - Employee attendance tracking
 - Check-in
 - Check-out
 - Attendance history
 
 ### Leave Management
+
 - Leave request
 - Leave approval
 - Leave balance tracking
 
-### Overtime Management
+<!-- ### Overtime Management
 - Overtime request
 - Overtime approval
-- Overtime history
+- Overtime history -->
 
-### Payroll Management
+<!-- ### Payroll Management
 - Salary management
 - Allowances
 - Deductions
-- Payslip generation
+- Payslip generation -->
 
-### Reimbursement Management
+<!-- ### Reimbursement Management
 - Expense submission
 - Approval workflow
-- Reimbursement history
+- Reimbursement history -->
 
-### Reporting
+<!-- ### Reporting
 - HR reports
 - Attendance reports
 - Payroll reports
-- Export reports
+- Export reports -->
 
 ### Administration
+
 - User management
 - Role management
 - System settings
@@ -97,16 +98,13 @@ The main objectives of this project are:
                   |
           PostgreSQL Database
 
-
----
-
 # Repository Structure
 
 This project consists of three repositories:
 
 ## 1. Documentation Repository
-hris-docs
 
+tavelahub-docs
 Contains:
 
 - Project documentation
@@ -116,12 +114,9 @@ Contains:
 - API documentation
 - Deployment guide
 
-
 ## 2. Frontend Repository
 
-hris-web
-
-
+tavelahub-web
 Contains:
 
 - User interface
@@ -129,13 +124,9 @@ Contains:
 - API integration
 - Application pages
 
-
 ## 3. Backend Repository
 
-
-hris-api
-
-
+tavelahub-api
 Contains:
 
 - REST API
@@ -144,56 +135,46 @@ Contains:
 - Authentication
 - Authorization
 
----
-
 # Technology Stack
 
 ## Frontend
 
-| Technology | Purpose |
-|------------|---------|
-| React | Frontend library |
-| TypeScript | Programming language |
-| Vite | Build tool |
-| React Router | Client-side routing |
-| Tailwind CSS | Styling framework |
-| shadcn/ui | UI component library |
-| Radix UI | Accessible components |
-| TanStack Query | Server state management |
-| Zustand | Client state management |
-| React Hook Form | Form management |
-| Zod | Data validation |
-| Axios | HTTP client |
-
----
+| Technology         | Purpose                 |
+| ------------------ | ----------------------- |
+| React              | Frontend library        |
+| TypeScript         | Programming language    |
+| Vite               | Build tool              |
+| React Router       | Client-side routing     |
+| Tailwind CSS       | Styling framework       |
+| shadcn/ui          | UI component library    |
+| Radix UI           | Accessible components   |
+| OpenAPI TypeScript | Server state management |
+| React Hook Form    | Form management         |
+| Zod                | Data validation         |
 
 ## Backend
 
-| Technology | Purpose |
-|------------|---------|
-| Bun | JavaScript runtime |
-| Hono | Backend framework |
-| TypeScript | Programming language |
-| Prisma ORM | Database ORM |
-| PostgreSQL | Database |
-| Zod | Schema validation |
-| JWT | Authentication |
-| Scalar OpenAPI | API documentation |
-| Pino | Logging |
-
----
+| Technology     | Purpose              |
+| -------------- | -------------------- |
+| Bun            | JavaScript runtime   |
+| Hono           | Backend framework    |
+| TypeScript     | Programming language |
+| Prisma ORM     | Database ORM         |
+| PostgreSQL     | Database             |
+| Zod            | Schema validation    |
+| JWT            | Authentication       |
+| Scalar OpenAPI | API documentation    |
+| Pino           | Logging              |
 
 ## Infrastructure
 
-| Technology | Purpose |
-|------------|---------|
-| GitHub | Source control |
-| GitHub Actions | CI/CD |
-| Supabase | PostgreSQL hosting |
-| Netlify | Frontend deployment |
-| Railway | Backend deployment |
-
----
+| Technology     | Purpose             |
+| -------------- | ------------------- |
+| GitHub         | Source control      |
+| GitHub Actions | CI/CD               |
+| Supabase       | PostgreSQL hosting  |
+| Netlify        | Frontend deployment |
+| Railway        | Backend deployment  |
 
 # User Roles
 
@@ -207,7 +188,6 @@ Responsibilities:
 - Manage permissions
 - Configure system settings
 
-
 ## HR Admin
 
 Responsibilities:
@@ -217,7 +197,6 @@ Responsibilities:
 - Manage payroll
 - Manage HR documents
 
-
 ## Manager
 
 Responsibilities:
@@ -225,7 +204,6 @@ Responsibilities:
 - Review employee requests
 - Approve leave
 - Monitor team performance
-
 
 ## Employee
 
@@ -236,48 +214,31 @@ Responsibilities:
 - View attendance
 - View payslips
 
----
-
 # Development Workflow
 
 ## Git Branch Strategy
+
 main
 |
 develop
 |
-feature/*
-
+feature/\*
 
 Branch naming:
-
-
 feature/add-authentication
 feature/create-employee-api
 bugfix/fix-login-error
 docs/update-readme
 
-
----
-
 # Commit Convention
 
 This project follows Conventional Commits.
-
 Examples:
-
-
 feat: add employee management module
-
 fix: resolve attendance calculation issue
-
 docs: update API documentation
-
 refactor: improve authentication service
-
 test: add employee service tests
-
-
----
 
 # Documentation
 
@@ -289,13 +250,11 @@ Project documentation includes:
 - Functional Requirements
 - Non Functional Requirements
 
-
 ## Architecture
 
 - System Architecture
 - Component Diagram
 - Deployment Diagram
-
 
 ## Database
 
@@ -303,13 +262,11 @@ Project documentation includes:
 - Database Schema
 - Table Dictionary
 
-
 ## API
 
 - API Specification
 - Authentication Flow
 - Error Handling
-
 
 ## Development
 
@@ -317,13 +274,10 @@ Project documentation includes:
 - Coding Standard
 - Git Workflow
 
-
 ## Deployment
 
 - Environment Configuration
 - Production Deployment Guide
-
----
 
 # Development Timeline
 
@@ -333,13 +287,11 @@ Project documentation includes:
 - Feature planning
 - System design
 
-
 ## Phase 2 - Development Setup
 
 - Repository setup
 - Development environment
 - CI/CD configuration
-
 
 ## Phase 3 - Core Development
 
@@ -349,13 +301,11 @@ Project documentation includes:
 - Leave
 - Payroll
 
-
 ## Phase 4 - Testing
 
 - Unit testing
 - Integration testing
 - Bug fixing
-
 
 ## Phase 5 - Production
 
@@ -363,47 +313,21 @@ Project documentation includes:
 - Final testing
 - Documentation completion
 
----
-
-# Deployment Architecture
-
-Developer
-|
-|
-GitHub Repository
-|
-|
-| |
-Frontend Backend
-Netlify Railway
-| |
-      |
-   Supabase
-  PostgreSQL
-
----
-
 # Team
 
-| Role | Responsibility |
-|-|-|
-| Tech Lead | Architecture, Code Review, Technical Direction |
-| Frontend Developer | React Application Development |
-| Backend Developer | API, Database, Infrastructure |
-
----
+| Role               | Responsibility                                 |
+| ------------------ | ---------------------------------------------- |
+| Tech Lead          | Architecture, Code Review, Technical Direction |
+| Frontend Developer | React Application Development                  |
+| Backend Developer  | API, Database, Infrastructure                  |
 
 # License
 
 This project is created for learning and portfolio purposes.
 
----
-
 # Author
 
-HRIS Development Team
-
----
+Tavelahub Development Team
 
 # System Architecture
 
