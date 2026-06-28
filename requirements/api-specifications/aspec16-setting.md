@@ -649,3 +649,99 @@ GET /settings/history
 - company_profiles
 - users
 - audit_logs
+
+```
+                settings
+                    |
+                    |
+        ┌───────────┼───────────┐
+        |           |           |
+ company_profile  history   workflow
+
+
+settings
+    |
+    |
+used by:
+
+Attendance
+Leave
+Payroll
+Notification
+Document
+Security
+```
+
+```
+model Setting {
+
+  id        String @id @default(uuid())
+
+  key       String @unique
+
+  value     Json
+
+  category  SettingCategory
+
+  updatedBy String?
+
+  createdAt DateTime @default(now())
+
+  updatedAt DateTime @updatedAt
+}
+
+
+model SettingHistory {
+
+  id        String @id @default(uuid())
+
+  settingId String
+
+  oldValue  Json
+
+  newValue  Json
+
+  updatedBy String
+
+  createdAt DateTime @default(now())
+}
+```
+
+```
+Settings Management
+│
+├── General Settings
+├── Company Profile
+├── Attendance Policy
+├── Leave Policy
+├── Payroll Configuration
+├── Notification Settings
+├── Security Settings
+├── Storage Settings
+├── Workflow Approval
+├── Localization
+└── Settings History
+```
+
+```
+Authentication Module
+        ↓
+User & Role Module
+        ↓
+Company Profile
+        ↓
+Settings Module
+        ↓
+All HR Modules Integration
+```
+
+```
+Settings
+   |
+   ├── Attendance Rules
+   ├── Leave Policy
+   ├── Payroll Rules
+   ├── File Upload Rules
+   ├── Notification Rules
+   └── Approval Workflow
+```

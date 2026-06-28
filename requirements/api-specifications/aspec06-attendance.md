@@ -581,3 +581,61 @@ File download.
 - departments
 - users
 - audit_logs
+
+```
+employees
+    |
+    |
+    ├──────── attendance_records
+    |
+    |
+    └──────── attendance_corrections
+```
+
+## Prisma
+
+```
+model AttendanceRecord {
+  id          String @id @default(uuid())
+
+  employeeId  String
+  employee    Employee @relation(
+    fields: [employeeId],
+    references: [id]
+  )
+
+  date        DateTime
+  checkIn     DateTime?
+  checkOut    DateTime?
+
+  workingHours Float?
+
+  status      AttendanceStatus
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+```
+
+```
+Attendance
+│
+├── Attendance Dashboard
+├── Check In / Check Out
+├── My Attendance History
+├── Team Attendance
+├── Attendance Detail
+├── Correction Request
+├── Approval Correction
+└── Attendance Report
+```
+
+```
+Employee Module
+        ↓
+Attendance Module
+        ↓
+Leave Module
+        ↓
+Payroll Module
+```

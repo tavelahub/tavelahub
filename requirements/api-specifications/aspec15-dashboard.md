@@ -583,3 +583,57 @@ Optional cache tables:
 
 - dashboard_cache
 - dashboard_logs
+
+```
+                Dashboard Module
+
+                       |
+                       |
+
+ ┌─────────┬───────────┬──────────┬──────────┐
+
+Employee Attendance  Leave   Payroll  Expense
+
+                       |
+                       |
+
+              PostgreSQL Database
+```
+
+```
+model DashboardCache {
+
+  id        String @id @default(uuid())
+
+  key       String
+
+  data      Json
+
+  expiresAt DateTime
+
+  createdAt DateTime @default(now())
+
+}
+```
+
+```
+Dashboard
+│
+├── HR Dashboard
+│   ├── Employee Overview
+│   ├── Attendance Chart
+│   ├── Leave Summary
+│   ├── Payroll Summary
+│   └── Expense Summary
+│
+├── Manager Dashboard
+│   ├── Team Attendance
+│   ├── Approval Queue
+│   └── Team Leave
+│
+└── Employee Dashboard
+    ├── Personal Attendance
+    ├── Leave Balance
+    ├── Payroll Summary
+    └── Notifications
+```

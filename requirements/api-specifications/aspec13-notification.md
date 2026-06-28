@@ -533,3 +533,79 @@ GET /notifications/summary
 - departments
 - announcements
 - audit_logs
+
+```
+users
+ |
+ |
+ └──────── notifications
+                |
+                |
+       ┌────────┴────────┐
+       |                 |
+notification_reads   notification_preferences
+
+
+notifications
+      |
+      |
+ referenceId
+      |
+      |
+ ┌────┼───────────┐
+ |    |           |
+Leave Payroll Announcement
+```
+
+```
+model Notification {
+  id          String @id @default(uuid())
+
+  userId      String
+
+  title       String
+  message     String
+
+  type        NotificationType
+
+  priority    NotificationPriority
+    @default(NORMAL)
+
+  referenceId String?
+
+  isRead      Boolean
+    @default(false)
+
+  createdAt   DateTime @default(now())
+
+  user        User @relation(
+    fields:[userId],
+    references:[id]
+  )
+}
+```
+
+```
+Notification
+│
+├── Notification Center
+├── Notification Detail
+├── Unread Notification Badge
+├── Notification Preferences
+├── Email Settings
+└── Admin Notification Management
+```
+
+```
+Authentication Module
+        ↓
+User Module
+        ↓
+Employee Module
+        ↓
+Announcement Module
+        ↓
+Notification Module
+        ↓
+All HR Modules Integration
+```

@@ -492,3 +492,66 @@ INACTIVE
 - departments
 - employees
 - audit_logs
+
+```
+                departments
+                     |
+                     |
+                     |
+                 positions
+                     |
+                     |
+                     |
+                 employees
+```
+
+## Prisma
+
+```
+model Position {
+  id             String @id @default(uuid())
+
+  name           String
+  code           String @unique
+  description    String?
+
+  departmentId   String
+  department     Department @relation(
+    fields: [departmentId],
+    references: [id]
+  )
+
+  level          PositionLevel
+  status         PositionStatus @default(ACTIVE)
+
+  employees      Employee[]
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+```
+
+```
+Organization
+│
+└── Positions
+    │
+    ├── Position List
+    ├── Position Detail
+    ├── Create Position
+    ├── Edit Position
+    ├── Assign Department
+    └── Employee List by Position
+```
+
+```
+1. Department Module
+        ↓
+2. Position Module
+        ↓
+3. Employee Module
+        ↓
+4. User & Authentication Module
+        ↓
+5. Attendance / Leave / Payroll
+```

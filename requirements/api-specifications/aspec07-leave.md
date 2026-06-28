@@ -622,3 +622,64 @@ EXCEL
 - payrolls
 - users
 - audit_logs
+
+```
+employees
+    |
+    |
+    └──────── leave_requests
+                    |
+                    |
+             leave_types
+                    |
+                    |
+             leave_balances
+```
+
+```
+model LeaveRequest {
+  id          String @id @default(uuid())
+
+  employeeId  String
+  employee    Employee @relation(
+    fields: [employeeId],
+    references: [id]
+  )
+
+  leaveTypeId String
+  leaveType   LeaveType @relation(
+    fields: [leaveTypeId],
+    references: [id]
+  )
+
+  startDate   DateTime
+  endDate     DateTime
+
+  totalDays   Float
+
+  reason      String
+
+  status      LeaveStatus @default(PENDING)
+
+  approvedBy  String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+```
+
+```
+
+Leave Management
+│
+├── Leave Dashboard
+├── My Leave Requests
+├── Create Leave Request
+├── Leave Detail
+├── Leave Balance
+├── Approval Queue
+├── Leave Calendar
+├── Leave Type Management
+└── Leave Report
+
+```

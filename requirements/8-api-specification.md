@@ -50,6 +50,30 @@ Authorization: Bearer <access_token>
 }
 ```
 
+## Flowchart
+
+```
+Authentication
+      ↓
+User & Role
+      ↓
+Employee
+      ↓
+Attendance
+      ↓
+Leave
+      ↓
+Overtime
+      ↓
+Payroll
+      ↓
+Reimbursement
+      ↓
+Dashboard Module
+      ↓
+Report Module
+```
+
 # Authentication Module
 
 ### Login

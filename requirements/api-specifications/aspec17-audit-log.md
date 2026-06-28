@@ -499,3 +499,72 @@ DELETE /audit-logs/archive
 - permissions
 - employees
 - settings
+
+```
+                    users
+                      |
+                      |
+                      v
+
+                audit_logs
+
+                      |
+        ┌─────────────┼─────────────┐
+
+     Employee       Payroll       Settings
+     Leave          Document      User
+     Attendance     Report        Role
+```
+
+```
+model AuditLog {
+
+  id          String @id @default(uuid())
+
+  userId      String?
+
+  action      AuditAction
+
+  module      AuditModule
+
+  entityId    String?
+
+  description String
+
+  beforeData  Json?
+
+  afterData   Json?
+
+  ipAddress   String?
+
+  userAgent   String?
+
+  createdAt   DateTime @default(now())
+
+}
+```
+
+```
+Audit Log Management
+│
+├── Audit Dashboard
+├── Activity Timeline
+├── User Activity
+├── Login History
+├── Security Monitoring
+├── Entity History
+├── Export Audit Report
+└── Audit Configuration
+```
+
+```
+Authentication Module
+        ↓
+User & Role Module
+        ↓
+Audit Log Core Service
+        ↓
+All HR Modules Integration
+        ↓
+Security Monitoring
+```

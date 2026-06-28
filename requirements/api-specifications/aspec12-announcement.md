@@ -572,3 +572,87 @@ GET /announcements/summary
 - employees
 - departments
 - audit_logs
+
+```
+users
+  |
+  |
+  └──────── announcements
+                  |
+                  |
+        ┌─────────┼─────────┐
+        |         |         |
+   targets   attachments   reads
+        |
+        |
+ employees / departments / roles
+```
+
+```
+model Announcement {
+  id          String @id @default(uuid())
+
+  title       String
+  content     String
+
+  category    AnnouncementCategory
+  priority    AnnouncementPriority
+
+  status      AnnouncementStatus @default(DRAFT)
+
+  publishedAt DateTime?
+
+  createdBy   String
+
+  attachments AnnouncementAttachment[]
+  reads       AnnouncementRead[]
+  targets     AnnouncementTarget[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+
+model AnnouncementRead {
+  id             String @id @default(uuid())
+
+  announcementId String
+  employeeId     String
+
+  readAt         DateTime @default(now())
+
+  announcement Announcement @relation(
+    fields:[announcementId],
+    references:[id]
+  )
+}
+```
+
+```
+Announcement
+│
+├── Announcement Dashboard
+├── Announcement List
+├── Announcement Detail
+├── Create Announcement
+├── Edit Announcement
+├── Schedule Announcement
+├── Read Tracking
+├── Attachment Management
+└── Announcement Report
+
+```
+
+```
+
+Authentication Module
+↓
+User & Role Module
+↓
+Employee Module
+↓
+Notification Module
+↓
+Announcement Module
+
+```

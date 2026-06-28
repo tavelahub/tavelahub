@@ -577,3 +577,70 @@ PDF File
 - leave_requests
 - users
 - audit_logs
+
+```
+employees
+    |
+    |
+    └──────── payrolls
+                  |
+                  |
+        ┌─────────┼─────────┐
+        |         |         |
+ salary_structure allowances deductions
+        |
+        |
+ attendance + overtime + leave
+```
+
+```
+model Payroll {
+  id          String @id @default(uuid())
+
+  employeeId  String
+  employee    Employee @relation(
+    fields: [employeeId],
+    references: [id]
+  )
+
+  period      String
+
+  basicSalary Decimal
+  allowance   Decimal
+  overtimePay Decimal
+  deduction   Decimal
+  tax         Decimal
+  netSalary   Decimal
+
+  status      PayrollStatus @default(DRAFT)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+```
+
+```
+Payroll
+│
+├── Payroll Dashboard
+├── Generate Payroll
+├── My Payslip
+├── Team Payroll
+├── Payroll Detail
+├── Approve Payroll
+├── Mark as Paid
+├── Cancel Payroll
+└── Payroll Report
+```
+
+```
+Employee Module
+        ↓
+Attendance Module
+        ↓
+Leave Module
+        ↓
+Overtime Module
+        ↓
+Payroll Module
+```

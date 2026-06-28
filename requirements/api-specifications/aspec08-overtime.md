@@ -506,3 +506,63 @@ File download.
 - payrolls
 - users
 - audit_logs
+
+```
+employees
+     |
+     |
+     └──────── overtime_requests
+                    |
+                    |
+             approved_by (users)
+
+```
+
+```
+model OvertimeRequest {
+  id          String @id @default(uuid())
+
+  employeeId  String
+  employee    Employee @relation(
+    fields: [employeeId],
+    references: [id]
+  )
+
+  date        DateTime
+  startTime   DateTime
+  endTime     DateTime
+
+  duration    Float
+
+  reason      String
+
+  status      OvertimeStatus @default(PENDING)
+
+  approvedBy  String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+```
+
+```
+Overtime
+│
+├── Overtime Dashboard
+├── My Overtime History
+├── Create Overtime Request
+├── Overtime Detail
+├── Team Overtime Approval
+├── Approval Detail
+└── Overtime Report
+```
+
+```
+Employee Module
+        ↓
+Attendance Module
+        ↓
+Overtime Module
+        ↓
+Payroll Module
+```

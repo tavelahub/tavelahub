@@ -604,3 +604,81 @@ EXCEL
 - employees
 - users
 - audit_logs
+
+```
+
+employees
+|
+|
+└──────── documents
+|
+|
+┌───────────┴───────────┐
+| |
+document_categories document_versions
+
+```
+
+```
+
+model Document {
+id String @id @default(uuid())
+
+employeeId String
+employee Employee @relation(
+fields: [employeeId],
+references: [id]
+)
+
+categoryId String
+category DocumentCategory @relation(
+fields: [categoryId],
+references: [id]
+)
+
+name String
+
+fileUrl String
+fileType String
+fileSize Int
+
+issueDate DateTime?
+expiryDate DateTime?
+
+status DocumentStatus @default(PENDING)
+
+versions DocumentVersion[]
+
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+}
+
+```
+
+```
+
+Document Management
+│
+├── Document Dashboard
+├── My Documents
+├── Upload Document
+├── Document Detail
+├── Document Preview
+├── Verification Queue
+├── Expiring Documents
+├── Category Management
+└── Document Report
+
+```
+
+```
+Authentication Module
+        ↓
+Employee Module
+        ↓
+File Storage Setup
+        ↓
+Document Module
+        ↓
+Notification Module
+```

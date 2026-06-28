@@ -654,3 +654,75 @@ File download.
 - payrolls
 - users
 - audit_logs
+
+```
+employees
+    |
+    |
+    └──────── reimbursement_requests
+                    |
+                    |
+          ┌─────────┴─────────┐
+          |                   |
+ reimbursement_categories   attachments
+          |
+          |
+       payrolls
+```
+
+```
+model ReimbursementRequest {
+  id          String @id @default(uuid())
+
+  employeeId  String
+  employee    Employee @relation(
+    fields: [employeeId],
+    references: [id]
+  )
+
+  categoryId  String
+  category    ReimbursementCategory @relation(
+    fields: [categoryId],
+    references: [id]
+  )
+
+  amount      Decimal
+  expenseDate DateTime
+
+  description String
+
+  receiptUrl  String?
+
+  status      ReimbursementStatus @default(PENDING)
+
+  approvedBy  String?
+  paidAt      DateTime?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+```
+
+```
+Reimbursement
+│
+├── Reimbursement Dashboard
+├── My Requests
+├── Create Request
+├── Request Detail
+├── Upload Receipt
+├── Approval Queue
+├── Payment Processing
+├── Categories Management
+└── Reports
+```
+
+```
+Employee Module
+        ↓
+User & Authentication
+        ↓
+Reimbursement Module
+        ↓
+Payroll Module
+```

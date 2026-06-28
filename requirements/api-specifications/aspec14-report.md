@@ -590,3 +590,75 @@ YEARLY
 - reimbursement_requests
 - users
 - audit_logs
+
+```
+users
+ |
+ |
+ └──────── reports
+                |
+        ┌───────┼────────┐
+        |       |        |
+ templates schedules logs
+
+
+reports
+ |
+ |
+generated from:
+
+Employee
+Attendance
+Leave
+Overtime
+Payroll
+Reimbursement
+Document
+```
+
+```
+model Report {
+  id          String @id @default(uuid())
+
+  name        String
+
+  type        ReportType
+
+  format      ReportFormat
+
+  status      ReportStatus
+      @default(PROCESSING)
+
+  fileUrl     String?
+
+  generatedBy String
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+```
+
+```
+Report Management
+│
+├── Report Dashboard
+├── Report Template List
+├── Generate Report
+├── Report History
+├── Report Preview
+├── Download Report
+├── Scheduled Report
+└── Custom Report Builder
+```
+
+```
+All Core Modules
+        ↓
+Dashboard Module
+        ↓
+Report Module
+        ↓
+Export Service
+        ↓
+Scheduled Job System
+```

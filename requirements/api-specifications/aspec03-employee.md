@@ -561,3 +561,35 @@ OTHER
 - documents
 - reimbursements
 - audit_logs
+
+## ERD
+
+```
+Employee
+ |
+ ├── User (1:1)
+ |
+ ├── Department (N:1)
+ |
+ ├── Position (N:1)
+ |
+ ├── Attendance (1:N)
+ |
+ ├── Leave Requests (1:N)
+ |
+ ├── Payroll (1:N)
+ |
+ ├── Documents (1:N)
+ |
+ └── Reimbursements (1:N)
+```
+
+```
+/employee
+├── Employee List
+├── Employee Detail
+├── Create Employee
+├── Edit Employee
+├── Employee Profile
+└── Employee Statistics
+```
