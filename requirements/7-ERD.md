@@ -121,8 +121,8 @@
 
 ## Database Modules
 
-| Database Modules | modules 1         | module 2    | module 3  | module 4 |
-| ---------------- | ----------------- | ----------- | --------- | -------- |
+| Database Modules | modules 1         | module 2    | module 3  |
+| ---------------- | ----------------- | ----------- | --------- |
 | Authentication   | roles             | users       | ---       |
 | Employee         | employees         | departments | positions |
 | Attendance       | attendance        | ---         | ---       |
