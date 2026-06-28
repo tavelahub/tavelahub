@@ -58,27 +58,31 @@ The main objectives of this project are:
 - Leave approval
 - Leave balance tracking
 
-<!-- ### Overtime Management
+### Overtime Management
+
 - Overtime request
 - Overtime approval
 - Overtime history -->
 
-<!-- ### Payroll Management
+### Payroll Management
+
 - Salary management
 - Allowances
 - Deductions
 - Payslip generation -->
 
-<!-- ### Reimbursement Management
+### Reimbursement Management
+
 - Expense submission
 - Approval workflow
-- Reimbursement history -->
+- Reimbursement history
 
-<!-- ### Reporting
+### Reporting
+
 - HR reports
 - Attendance reports
 - Payroll reports
-- Export reports -->
+- Export reports
 
 ### Administration
 
@@ -87,6 +91,7 @@ The main objectives of this project are:
 - System settings
 - Audit logs
 
+```
                 User
                   |
                   |
@@ -97,6 +102,7 @@ The main objectives of this project are:
                   |
                   |
           PostgreSQL Database
+```
 
 # Repository Structure
 
@@ -218,11 +224,13 @@ Responsibilities:
 
 ## Git Branch Strategy
 
+```
 main
 |
 develop
 |
-feature/\*
+feature/*
+```
 
 Branch naming:
 feature/add-authentication
