@@ -121,19 +121,21 @@
 
 ## Database Modules
 
-| Database Modules | modules           |
-| ---------------- | ----------------- | ----------- | --------- |
-| Authentication   | roles             | users       |
+| Database Modules | modules 1         | module 2    | module 3  | module 4 |
+| ---------------- | ----------------- | ----------- | --------- | -------- |
+| Authentication   | roles             | users       | ---       |
 | Employee         | employees         | departments | positions |
-| Attendance       | attendance        |
-| Leave            | leave_requests    |
-| Overtime         | overtime_requests |
-| Payroll          | payrolls          |
-| Reimbursement    | reimbursements    |
-| Documents        | documents         |
-| Notification     | notifications     |
-| Announcement     | announcements     |
-| Audit            | audit_logs        |
+| Attendance       | attendance        | ---         | ---       |
+| Leave            | leave_requests    | ---         | ---       |
+| Overtime         | overtime_requests | ---         | ---       |
+| Payroll          | payrolls          | ---         | ---       |
+| Reimbursement    | reimbursements    | ---         | ---       |
+| Documents        | documents         | ---         | ---       |
+| Notification     | notifications     | ---         | ---       |
+| Announcement     | announcements     | ---         | ---       |
+| Audit            | audit_logs        | ---         | ---       |
+
+## tables
 
 | Module         |        Tables |
 | -------------- | ------------: |
