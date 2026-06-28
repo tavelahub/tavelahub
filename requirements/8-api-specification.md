@@ -52,11 +52,11 @@ Authorization: Bearer <access_token>
 
 # Authentication Module
 
-## Login
+### Login
 
 POST /auth/login
 
-### Request
+##### Request
 
 ```json
 {
@@ -65,7 +65,7 @@ POST /auth/login
 }
 ```
 
-### Response
+##### Response
 
 ```json
 {
@@ -75,47 +75,47 @@ POST /auth/login
 }
 ```
 
-## Logout
+### Logout
 
 POST /auth/logout
 
-## Refresh Token
+### Refresh Token
 
 POST /auth/refresh
 
-## Current User
+### Current User
 
 GET /auth/me
 
 # User Module
 
-## Get Users
+### Get Users
 
 GET /users
 
-## Get User Detail
+### Get User Detail
 
 GET /users/{id}
 
-## Create User
+### Create User
 
 POST /users
 
-## Update User
+### Update User
 
 PUT /users/{id}
 
-## Delete User
+### Delete User
 
 DELETE /users/{id}
 
-## Reset Password
+### Reset Password
 
 PATCH /users/{id}/reset-password
 
 # Employee Module
 
-## Get Employees
+### Get Employees
 
 GET /employees
 
@@ -127,289 +127,289 @@ Query Parameters
 - department
 - position
 
-## Employee Detail
+### Employee Detail
 
 GET /employees/{id}
 
-## Create Employee
+### Create Employee
 
 POST /employees
 
-## Update Employee
+### Update Employee
 
 PUT /employees/{id}
 
-## Delete Employee
+### Delete Employee
 
 DELETE /employees/{id}
 
 # Department Module
 
-## Get Departments
+### Get Departments
 
 GET /departments
 
-## Department Detail
+### Department Detail
 
 GET /departments/{id}
 
-## Create Department
+### Create Department
 
 POST /departments
 
-## Update Department
+### Update Department
 
 PUT /departments/{id}
 
-## Delete Department
+### Delete Department
 
 DELETE /departments/{id}
 
 # Position Module
 
-## Get Positions
+### Get Positions
 
 GET /positions
 
-## Position Detail
+### Position Detail
 
 GET /positions/{id}
 
-## Create Position
+### Create Position
 
 POST /positions
 
-## Update Position
+### Update Position
 
 PUT /positions/{id}
 
-## Delete Position
+### Delete Position
 
 DELETE /positions/{id}
 
 # Attendance Module
 
-## Check In
+### Check In
 
 POST /attendance/check-in
 
-## Check Out
+### Check Out
 
 POST /attendance/check-out
 
-## Attendance History
+### Attendance History
 
 GET /attendance
 
-## Attendance Detail
+### Attendance Detail
 
 GET /attendance/{id}
 
-## Attendance Report
+### Attendance Report
 
 GET /attendance/report
 
 # Leave Module
 
-## Get Leave Requests
+### Get Leave Requests
 
 GET /leave-requests
 
-## Submit Leave Request
+### Submit Leave Request
 
 POST /leave-requests
 
-## Leave Detail
+### Leave Detail
 
 GET /leave-requests/{id}
 
-## Update Leave Request
+### Update Leave Request
 
 PUT /leave-requests/{id}
 
-## Cancel Leave Request
+### Cancel Leave Request
 
 DELETE /leave-requests/{id}
 
-## Approve Leave
+### Approve Leave
 
 PATCH /leave-requests/{id}/approve
 
-## Reject Leave
+### Reject Leave
 
 PATCH /leave-requests/{id}/reject
 
 # Overtime Module
 
-## Get Overtime Requests
+### Get Overtime Requests
 
 GET /overtime-requests
 
-## Submit Overtime
+### Submit Overtime
 
 POST /overtime-requests
 
-## Overtime Detail
+### Overtime Detail
 
 GET /overtime-requests/{id}
 
-## Approve Overtime
+### Approve Overtime
 
 PATCH /overtime-requests/{id}/approve
 
-## Reject Overtime
+### Reject Overtime
 
 PATCH /overtime-requests/{id}/reject
 
 # Payroll Module
 
-## Payroll List
+### Payroll List
 
 GET /payrolls
 
-## Payroll Detail
+### Payroll Detail
 
 GET /payrolls/{id}
 
-## Generate Payroll
+### Generate Payroll
 
 POST /payrolls/generate
 
-## Generate Payslip
+### Generate Payslip
 
 POST /payrolls/{id}/generate-payslip
 
-## Download Payslip
+### Download Payslip
 
 GET /payrolls/{id}/download
 
 # Reimbursement Module
 
-## Reimbursement List
+### Reimbursement List
 
 GET /reimbursements
 
-## Submit Reimbursement
+### Submit Reimbursement
 
 POST /reimbursements
 
-## Reimbursement Detail
+### Reimbursement Detail
 
 GET /reimbursements/{id}
 
-## Approve Reimbursement
+### Approve Reimbursement
 
 PATCH /reimbursements/{id}/approve
 
-## Reject Reimbursement
+### Reject Reimbursement
 
 PATCH /reimbursements/{id}/reject
 
 # Document Module
 
-## Upload Document
+### Upload Document
 
 POST /documents
 
-## Document List
+### Document List
 
 GET /documents
 
-## Download Document
+### Download Document
 
 GET /documents/{id}
 
-## Delete Document
+### Delete Document
 
 DELETE /documents/{id}
 
 # Announcement Module
 
-## Get Announcements
+### Get Announcements
 
 GET /announcements
 
-## Announcement Detail
+### Announcement Detail
 
 GET /announcements/{id}
 
-## Create Announcement
+### Create Announcement
 
 POST /announcements
 
-## Update Announcement
+### Update Announcement
 
 PUT /announcements/{id}
 
-## Delete Announcement
+### Delete Announcement
 
 DELETE /announcements/{id}
 
 # Notification Module
 
-## Notification List
+### Notification List
 
 GET /notifications
 
-## Mark as Read
+### Mark as Read
 
 PATCH /notifications/{id}/read
 
-## Mark All as Read
+### Mark All as Read
 
 PATCH /notifications/read-all
 
 # Report Module
 
-## Employee Report
+### Employee Report
 
 GET /reports/employees
 
-## Attendance Report
+### Attendance Report
 
 GET /reports/attendance
 
-## Leave Report
+### Leave Report
 
 GET /reports/leave
 
-## Payroll Report
+### Payroll Report
 
 GET /reports/payroll
 
-## Reimbursement Report
+### Reimbursement Report
 
 GET /reports/reimbursements
 
 # Dashboard Module
 
-## Dashboard Summary
+### Dashboard Summary
 
 GET /dashboard
 
-## Dashboard Statistics
+### Dashboard Statistics
 
 GET /dashboard/statistics
 
-## Dashboard Recent Activities
+### Dashboard Recent Activities
 
 GET /dashboard/activities
 
 # Settings Module
 
-## Company Settings
+### Company Settings
 
 GET /settings/company
 
 PUT /settings/company
 
-## Working Hours
+### Working Hours
 
 GET /settings/working-hours
 
 PUT /settings/working-hours
 
-## Leave Types
+### Leave Types
 
 GET /settings/leave-types
 
@@ -421,13 +421,13 @@ DELETE /settings/leave-types/{id}
 
 # Audit Log Module
 
-## Activity Logs
+### Activity Logs
 
 GET /audit-logs
 
-## Activity Detail
+### Activity Detail
 
-## GET /audit-logs/{id}
+### GET /audit-logs/{id}
 
 ---
 
