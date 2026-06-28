@@ -4,7 +4,7 @@ TavelaHub primary documentation
 
 # HRIS - Human Resource Information System
 
-![Tavelahub Banner](./assets/banner.png)
+![Tavelahub Logo](./images/tavelahub-logo-full.png)
 
 ## Overview
 
