@@ -25,13 +25,13 @@ Employee
 
 # 3. User Roles
 
-# 3.1 Super Admin
+## 3.1 Super Admin
 
-## Description
+### Description
 
 Super Admin is the highest-level system administrator responsible for managing system configuration, security, and user access.
 
-## Responsibilities
+### Responsibilities
 
 - Manage system users
 - Manage roles and permissions
@@ -39,42 +39,42 @@ Super Admin is the highest-level system administrator responsible for managing s
 - Monitor system activities
 - Manage organization settings
 
-## Access Level
+### Access Level
 
 Full system access.
 
-## Permissions
+### Permissions
 
-### User Management
+#### User Management
 
 ✅ Create users  
 ✅ Update users  
 ✅ Deactivate users  
 ✅ Reset passwords
 
-### Role Management
+#### Role Management
 
 ✅ Create roles  
 ✅ Update roles  
 ✅ Assign permissions
 
-### System Settings
+#### System Settings
 
 ✅ Manage company settings  
 ✅ Configure application settings  
 ✅ Configure system preferences
 
-### Audit Log
+#### Audit Log
 
 ✅ View all system activities
 
-# 3.2 HR Admin
+## 3.2 HR Admin
 
-## Description
+### Description
 
 HR Admin is responsible for managing human resource operations and employee-related processes.
 
-## Responsibilities
+### Responsibilities
 
 - Manage employee information
 - Manage attendance records
@@ -82,143 +82,143 @@ HR Admin is responsible for managing human resource operations and employee-rela
 - Process payroll
 - Generate HR reports
 
-## Access Level
+### Access Level
 
 Administrative access to HR modules.
 
-## Permissions
+### Permissions
 
-### Employee Management
+#### Employee Management
 
 ✅ Create employee profiles  
 ✅ Update employee information  
 ✅ View employee data  
 ✅ Manage employment information
 
-### Organization Management
+#### Organization Management
 
 ✅ Manage departments  
 ✅ Manage positions  
 ✅ Manage employee assignments
 
-### Attendance Management
+#### Attendance Management
 
 ✅ View attendance records  
 ✅ Correct attendance data  
 ✅ Generate attendance reports
 
-### Leave Management
+#### Leave Management
 
 ✅ Manage leave types  
 ✅ View leave requests  
 ✅ Manage leave balance
 
-### Payroll Management
+#### Payroll Management
 
 ✅ Manage salary information  
 ✅ Process payroll  
 ✅ Generate payslips
 
-### Document Management
+#### Document Management
 
 ✅ Upload employee documents  
 ✅ Manage HR documents
 
-### Reporting
+#### Reporting
 
 ✅ Generate HR reports  
 ✅ Export reports
 
-# 3.3 Manager
+## 3.3 Manager
 
-## Description
+### Description
 
 Manager is responsible for managing team members and approving employee requests.
 
-## Responsibilities
+### Responsibilities
 
 - Monitor team activities
 - Approve employee requests
 - Review team attendance
 - Evaluate employee performance
 
-## Access Level
+### Access Level
 
 Limited access to assigned team data.
 
-## Permissions
+### Permissions
 
-### Team Management
+#### Team Management
 
 ✅ View team members  
 ✅ View employee information within team
 
-### Approval Management
+#### Approval Management
 
 ✅ Approve leave requests  
 ✅ Reject leave requests  
 ✅ Approve overtime requests  
 ✅ Approve reimbursement requests
 
-### Attendance
+#### Attendance
 
 ✅ View team attendance records
 
-### Performance
+#### Performance
 
 ✅ Review employee performance
 
-# 3.4 Employee
+## 3.4 Employee
 
-## Description
+### Description
 
 Employee is a regular user who can access personal HR services through the Employee Self-Service (ESS) platform.
 
-## Responsibilities
+### Responsibilities
 
 - Manage personal information
 - Submit HR requests
 - View personal records
 
-## Access Level
+### Access Level
 
 Personal data access only.
 
-## Permissions
+### Permissions
 
-### Personal Profile
+#### Personal Profile
 
 ✅ View personal profile  
 ✅ Update allowed personal information
 
-### Attendance
+#### Attendance
 
 ✅ Check in  
 ✅ Check out  
 ✅ View attendance history
 
-### Leave Management
+#### Leave Management
 
 ✅ Submit leave request  
 ✅ View leave balance  
 ✅ View leave history
 
-### Overtime Management
+#### Overtime Management
 
 ✅ Submit overtime request  
 ✅ View overtime status
 
-### Reimbursement
+#### Reimbursement
 
 ✅ Submit reimbursement request  
 ✅ View reimbursement status
 
-### Payroll
+#### Payroll
 
 ✅ View payslip  
 ✅ Download payslip
 
-### Document
+#### Document
 
 ✅ View personal documents  
 ✅ Download personal documents
@@ -245,11 +245,11 @@ Personal data access only.
 
 # 5. Access Control Rules
 
-## Rule 1 - Authentication Required
+### Rule 1 - Authentication Required
 
 All users must authenticate before accessing the system.
 
-## Rule 2 - Role-Based Access
+### Rule 2 - Role-Based Access
 
 Users can only access features assigned to their role.
 
@@ -257,7 +257,7 @@ Example:
 
 Employee cannot access payroll management.
 
-## Rule 3 - Data Visibility
+### Rule 3 - Data Visibility
 
 Users can only view data based on their access level.
 
@@ -268,7 +268,7 @@ Examples:
 - HR Admin → All employee data
 - Super Admin → Entire system
 
-## Rule 4 - Approval Authority
+### Rule 4 - Approval Authority
 
 Only authorized roles can approve requests.
 
@@ -290,7 +290,7 @@ HR Verification
 
 Additional roles that may be added in future versions:
 
-## Finance Admin
+### Finance Admin
 
 Responsibilities:
 
@@ -298,7 +298,7 @@ Responsibilities:
 - Verify financial transactions
 - Manage reimbursement payments
 
-## Recruiter
+### Recruiter
 
 Responsibilities:
 
@@ -306,7 +306,7 @@ Responsibilities:
 - Manage candidates
 - Schedule interviews
 
-## Trainer
+### Trainer
 
 Responsibilities:
 

@@ -2,9 +2,28 @@
 
 ## Overview
 
-This document provides a complete list of features available in the Human Resource Information System (HRIS). These features are organized into modules to improve development planning, project management, and system maintenance.
+This document provides a complete list of features available in the TavelaHub (HRIS). These features are organized into modules to improve development planning, project management, and system maintenance.
 
 # Core Modules
+
+## System Modules
+
+    Authentication & Authorization
+    User Management
+    Employee Management
+    Attendance Management
+    Dashboard
+    Organization Management
+    Leave Management
+    Overtime Management
+    Payroll Management
+    Reimbursement Management
+    Document Management
+    Announcement Management
+    Notification Management
+    Report Management
+    Audit Log
+    Settings Management
 
 ## Authentication & Authorization
 
@@ -220,7 +239,7 @@ Manage system configuration.
 
 # User Self-Service Modules
 
-## Employee Self-Service (ESS)
+### Employee Self-Service (ESS)
 
 Allow employees to manage their own HR activities.
 

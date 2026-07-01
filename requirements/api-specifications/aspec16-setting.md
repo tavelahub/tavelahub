@@ -674,35 +674,22 @@ Security
 
 ```
 model Setting {
-
   id        String @id @default(uuid())
-
   key       String @unique
-
   value     Json
-
   category  SettingCategory
-
   updatedBy String?
-
   createdAt DateTime @default(now())
-
   updatedAt DateTime @updatedAt
 }
 
 
 model SettingHistory {
-
   id        String @id @default(uuid())
-
   settingId String
-
   oldValue  Json
-
   newValue  Json
-
   updatedBy String
-
   createdAt DateTime @default(now())
 }
 ```

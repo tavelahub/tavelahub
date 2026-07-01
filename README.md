@@ -147,9 +147,13 @@ Contains:
 
 | Technology         | Purpose                 |
 | ------------------ | ----------------------- |
+| HTML               | Structure               |
+| CSS                | Styling                 |
 | React              | Frontend library        |
+| Bun                | JavaScript runtime      |
+| Bun                | Package Manager         |
+| Bun                | Build tool              |
 | TypeScript         | Programming language    |
-| Vite               | Build tool              |
 | React Router       | Client-side routing     |
 | Tailwind CSS       | Styling framework       |
 | shadcn/ui          | UI component library    |
@@ -157,6 +161,7 @@ Contains:
 | OpenAPI TypeScript | Server state management |
 | React Hook Form    | Form management         |
 | Zod                | Data validation         |
+| Docker             | Continerization         |
 
 ## Backend
 
@@ -164,6 +169,8 @@ Contains:
 | -------------- | -------------------- |
 | Bun            | JavaScript runtime   |
 | Hono           | Backend framework    |
+| Bun            | Package Manager      |
+| Bun            | Build tool           |
 | TypeScript     | Programming language |
 | Prisma ORM     | Database ORM         |
 | PostgreSQL     | Database             |
@@ -171,16 +178,19 @@ Contains:
 | JWT            | Authentication       |
 | Scalar OpenAPI | API documentation    |
 | Pino           | Logging              |
+| Docker         | Containerization     |
+| postgresql     | Database hosting     |
 
 ## Infrastructure
 
-| Technology     | Purpose             |
-| -------------- | ------------------- |
-| GitHub         | Source control      |
-| GitHub Actions | CI/CD               |
-| Supabase       | PostgreSQL hosting  |
-| Netlify        | Frontend deployment |
-| Railway        | Backend deployment  |
+| Technology | Purpose             |
+| ---------- | ------------------- |
+| GitHub     | Source control      |
+| Netlify    | Frontend deployment |
+| Railway    | Backend deployment  |
+| Railway    | PostgreSQL hosting  |
+
+<!-- | GitHub Actions | CI/CD               | -->
 
 # User Roles
 
@@ -226,8 +236,6 @@ Responsibilities:
 
 ```
 main
-|
-develop
 |
 feature/*
 ```

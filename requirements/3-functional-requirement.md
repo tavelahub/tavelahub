@@ -4,11 +4,11 @@
 
 ### Project Name
 
-Human Resource Information System (HRIS)
+Tavelahub
 
 ### Purpose
 
-This document describes the functional requirements of the HRIS application. It defines the system features, user interactions, and expected behaviors that must be implemented.
+This document describes the functional requirements of the Tavelahub application. It defines the system features, user interactions, and expected behaviors that must be implemented.
 
 # 2. System Users
 
@@ -23,82 +23,82 @@ The system consists of several user roles:
 
 # 3. Functional Requirements
 
-# 3.1 Authentication & Authorization
+## 3.1 Authentication & Authorization
 
-## FR-AUTH-001 User Login
+### FR-AUTH-001 User Login
 
-### Description
+#### Description
 
 The system shall allow users to authenticate using registered credentials.
 
-### User Flow
+#### User Flow
 
 1. User enters email and password.
 2. System validates credentials.
 3. System generates authentication token.
 4. User is redirected to the dashboard.
 
-### Acceptance Criteria
+#### Acceptance Criteria
 
 - User can login with valid credentials.
 - Invalid credentials display an error message.
 - Unauthenticated users cannot access protected pages.
 
-## FR-AUTH-002 User Logout
+### FR-AUTH-002 User Logout
 
-### Description
+#### Description
 
 The system shall allow users to securely log out.
 
-### Acceptance Criteria
+#### Acceptance Criteria
 
 - User session is terminated.
 - Authentication token is invalidated.
 - User is redirected to the login page.
 
-## FR-AUTH-003 Role-Based Access Control
+### FR-AUTH-003 Role-Based Access Control
 
-### Description
+#### Description
 
 The system shall restrict access based on user roles and permissions.
 
-### Acceptance Criteria
+#### Acceptance Criteria
 
 - Users only see authorized menus.
 - Unauthorized access attempts are rejected.
 
-# 3.2 User Management
+## 3.2 User Management
 
-## FR-USER-001 Manage User Accounts
+### FR-USER-001 Manage User Accounts
 
-### Description
+#### Description
 
 Super Admin shall be able to create, update, deactivate, and manage user accounts.
 
-### Features
+#### Features
 
 - Create user
 - Update user information
 - Activate/deactivate account
 - Assign roles
 
-## FR-USER-002 Manage Roles and Permissions
+### FR-USER-002 Manage Roles and Permissions
 
-### Description
+#### Description
 
 Super Admin shall be able to configure user roles and system permissions.
 
-### Features
+#### Features
 
 - Create roles
 - Assign permissions
 - Update permissions
 
-# 3.3 Employee Management
+## 3.3 Employee Management
 
-## FR-EMP-001 Create Employee Profile
+### FR-EMP-001 Create Employee Profile
 
-### Description
+#### Description
 
 HR Admin shall be able to create employee records.
 
@@ -116,27 +116,27 @@ Employee information includes:
 - Employment status
 - Join date
 
-## FR-EMP-002 View Employee Information
+### FR-EMP-002 View Employee Information
 
-### Description
+#### Description
 
 Authorized users shall be able to view employee profiles.
 
-### Acceptance Criteria
+#### Acceptance Criteria
 
 - Employee data can be searched.
 - Employee details can be displayed.
 - Access follows user permissions.
 
-## FR-EMP-003 Update Employee Information
+### FR-EMP-003 Update Employee Information
 
-### Description
+#### Description
 
 Authorized users shall be able to update employee information.
 
-## FR-EMP-004 Employee Search and Filter
+### FR-EMP-004 Employee Search and Filter
 
-### Description
+#### Description
 
 The system shall provide employee searching and filtering capabilities.
 
@@ -146,11 +146,11 @@ Filter options:
 - Position
 - Employment status
 
-# 3.4 Organization Management
+## 3.4 Organization Management
 
-## FR-ORG-001 Manage Departments
+### FR-ORG-001 Manage Departments
 
-### Description
+#### Description
 
 HR Admin shall be able to manage company departments.
 
@@ -161,9 +161,9 @@ Features:
 - Delete department
 - View department list
 
-## FR-ORG-002 Manage Positions
+### FR-ORG-002 Manage Positions
 
-### Description
+#### Description
 
 HR Admin shall be able to manage job positions.
 
@@ -173,11 +173,11 @@ Features:
 - Update position
 - Assign position level
 
-# 3.5 Attendance Management
+## 3.5 Attendance Management
 
-## FR-ATT-001 Employee Check In
+### FR-ATT-001 Employee Check In
 
-### Description
+#### Description
 
 Employees shall be able to record their start working time.
 
@@ -187,9 +187,9 @@ System shall store:
 - Check-in time
 - Date
 
-## FR-ATT-002 Employee Check Out
+### FR-ATT-002 Employee Check Out
 
-### Description
+#### Description
 
 Employees shall be able to record their end working time.
 
@@ -198,9 +198,9 @@ System shall calculate:
 - Working duration
 - Attendance status
 
-## FR-ATT-003 View Attendance History
+### FR-ATT-003 View Attendance History
 
-### Description
+#### Description
 
 Employees and HR Admin shall be able to view attendance records.
 
@@ -210,9 +210,9 @@ Features:
 - Monthly attendance
 - Attendance filtering
 
-## FR-ATT-004 Attendance Report
+### FR-ATT-004 Attendance Report
 
-### Description
+#### Description
 
 HR Admin shall be able to generate attendance reports.
 
@@ -221,11 +221,11 @@ Output:
 - PDF
 - Excel
 
-# 3.6 Leave Management
+## 3.6 Leave Management
 
-## FR-LEAVE-001 Submit Leave Request
+### FR-LEAVE-001 Submit Leave Request
 
-### Description
+#### Description
 
 Employees shall be able to submit leave requests.
 
@@ -237,9 +237,9 @@ Required data:
 - Reason
 - Attachment
 
-## FR-LEAVE-002 Approve Leave Request
+### FR-LEAVE-002 Approve Leave Request
 
-### Description
+#### Description
 
 Managers shall be able to approve or reject leave requests.
 
@@ -248,17 +248,17 @@ Actions:
 - Approve
 - Reject
 
-## FR-LEAVE-003 Manage Leave Balance
+### FR-LEAVE-003 Manage Leave Balance
 
-### Description
+#### Description
 
 System shall automatically calculate employee leave balance.
 
-# 3.7 Overtime Management
+## 3.7 Overtime Management
 
-## FR-OT-001 Submit Overtime Request
+### FR-OT-001 Submit Overtime Request
 
-### Description
+#### Description
 
 Employees shall be able to submit overtime requests.
 
@@ -268,17 +268,17 @@ Required information:
 - Duration
 - Reason
 
-## FR-OT-002 Approve Overtime Request
+### FR-OT-002 Approve Overtime Request
 
-### Description
+#### Description
 
 Managers shall review and approve overtime requests.
 
-# 3.8 Payroll Management
+## 3.8 Payroll Management
 
-## FR-PAY-001 Manage Salary Information
+### FR-PAY-001 Manage Salary Information
 
-### Description
+#### Description
 
 HR Admin shall manage employee salary components.
 
@@ -289,15 +289,15 @@ Components:
 - Bonus
 - Deduction
 
-## FR-PAY-002 Generate Payroll
+### FR-PAY-002 Generate Payroll
 
-### Description
+#### Description
 
 System shall calculate employee payroll based on configured salary data.
 
-## FR-PAY-003 Generate Payslip
+### FR-PAY-003 Generate Payslip
 
-### Description
+#### Description
 
 System shall generate digital payslips.
 
@@ -305,11 +305,11 @@ Output:
 
 - PDF file
 
-# 3.9 Reimbursement Management
+## 3.9 Reimbursement Management
 
-## FR-REIM-001 Submit Reimbursement Request
+### FR-REIM-001 Submit Reimbursement Request
 
-### Description
+#### Description
 
 Employees shall be able to submit expense claims.
 
@@ -320,17 +320,17 @@ Required information:
 - Description
 - Receipt attachment
 
-## FR-REIM-002 Approve Reimbursement
+### FR-REIM-002 Approve Reimbursement
 
-### Description
+#### Description
 
 Managers shall approve or reject reimbursement requests.
 
-# 3.10 Document Management
+## 3.10 Document Management
 
-## FR-DOC-001 Upload Employee Documents
+### FR-DOC-001 Upload Employee Documents
 
-### Description
+#### Description
 
 HR Admin shall upload employee documents.
 
@@ -340,17 +340,17 @@ Examples:
 - Certificate
 - Identification documents
 
-## FR-DOC-002 Download Documents
+### FR-DOC-002 Download Documents
 
-### Description
+#### Description
 
 Authorized users shall download available documents.
 
-# 3.11 Dashboard
+## 3.11 Dashboard
 
-## FR-DASH-001 Display HR Summary
+### FR-DASH-001 Display HR Summary
 
-### Description
+#### Description
 
 System shall display important HR information.
 
@@ -361,11 +361,11 @@ Dashboard widgets:
 - Leave requests
 - Payroll summary
 
-# 3.12 Notification Management
+## 3.12 Notification Management
 
-## FR-NOTIF-001 Send Notifications
+### FR-NOTIF-001 Send Notifications
 
-### Description
+#### Description
 
 System shall notify users about important events.
 
@@ -375,25 +375,25 @@ Examples:
 - Reimbursement approval
 - Announcements
 
-# 3.13 Announcement Management
+## 3.13 Announcement Management
 
-## FR-ANN-001 Create Announcement
+### FR-ANN-001 Create Announcement
 
-### Description
+#### Description
 
 HR Admin shall create company announcements.
 
-## FR-ANN-002 View Announcement
+### FR-ANN-002 View Announcement
 
-### Description
+#### Description
 
 Employees shall view published announcements.
 
-# 3.14 Reporting
+## 3.14 Reporting
 
-## FR-REPORT-001 Generate Reports
+### FR-REPORT-001 Generate Reports
 
-### Description
+#### Description
 
 System shall provide HR reports.
 
@@ -404,9 +404,9 @@ Report types:
 - Leave report
 - Payroll report
 
-## FR-REPORT-002 Export Reports
+### FR-REPORT-002 Export Reports
 
-### Description
+#### Description
 
 Users shall export reports.
 
@@ -415,11 +415,11 @@ Supported formats:
 - PDF
 - Excel
 
-# 3.15 Audit Log
+## 3.15 Audit Log
 
-## FR-AUDIT-001 Record User Activities
+### FR-AUDIT-001 Record User Activities
 
-### Description
+#### Description
 
 System shall record important user activities.
 
